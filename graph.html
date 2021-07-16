@@ -1,1 +1,60 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['bar']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          [ 'student (A,B,C,D)','subject a', 'subject b', 'subject c','subject d'],
+
+          [ 'jan(A)',56, 75, 69,86],
+          [ 'feb(A)',65, 72, 86,79],
+          [ 'march(A)',80, 78, 75,70],
+
+           [ 'jan(B)',72, 63, 90,85],
+          [ 'feb(B)',85, 65, 70,85],
+          [ 'march(B)',90, 75, 85,80],
+
+         
+
+          [ 'jan(C)',77, 70, 56,61],
+          [ 'feb(C)',68, 65, 70,67],
+          [ 'march(C)',72, 75, 85,73],
+
+           [ 'jan(D)',63, 45, 59,72],
+          [ 'feb(D)',70, 58, 68,79],
+          [ 'march(D)',72, 67, 72,75],
+
+
+          
+        ]);
+
+        var options = {
+          chart: {
+            title: 'Student Performance',
+            subtitle: 'month,January,February,March',
+            Note:' Jan(A) is student A ,jan(B) is student B,jan(c) is student c or jan(D) is student D',
+          }
+        };
+
+        var chart = new google.charts.Bar(document.getElementById('columnchart_material'));
+
+        chart.draw(data, google.charts.Bar.convertOptions(options));
+      }
+    </script>
+    
+  </head>
+  <body>
+    <div id="columnchart_material" style="width: 800px; height: 500px;"></div>
+
+
+  </body>
+
+</html>
+
+
+
+
 
